@@ -9,19 +9,48 @@
 </head>
 <body class="bg-slate-900">
     <header>
-        <h1 class="text-5xl font-bold uppercase text-[#379cc8] text-center py-10 border-b border-blue-300">El Juego del Ahorcado</h1>
+        <nav class="w-full py-2 bg-slate-600/30">
+            <ul class="flex gap-5 flex-wrap justify-center">
+                <li class="flex transition-transform">
+                    <a href="../index.html"
+                        class="py-3 px-5 border border-solid border-slate-200 text-slate-200 font-bold text-center rounded-md hover:bg-slate-600 hover:transition-colors transition-colors hover:border-slate-500 hover:shadow-md hover:shadow-cyan-700">Inicio</a>
+                </li>
+                <li class="flex transition-transform">
+                    <a href="../pages/carrusel.html"
+                        class="py-3 px-5 border border-solid border-slate-200 text-slate-200 font-bold text-center rounded-md hover:bg-slate-600 hover:transition-colors transition-colors hover:border-slate-500 hover:shadow-md hover:shadow-cyan-700">Menu
+                        Carrusel</a>
+                </li>
+                <li class="flex transition-transform">
+                    <a href=""
+                        class="py-3 px-5 border border-solid border-slate-200 text-slate-200 font-bold text-center rounded-md hover:bg-slate-600 hover:transition-colors transition-colors hover:border-slate-500 hover:shadow-md hover:shadow-cyan-700">Video</a>
+                </li>
+                <li class="flex transition-transform">
+                    <a href="/pages/ahorcadoJuego.html"
+                        class="py-3 px-5 border border-solid border-slate-200 text-slate-200 font-bold text-center rounded-md hover:bg-slate-600 hover:transition-colors transition-colors hover:border-slate-500 hover:shadow-md hover:shadow-cyan-700">Ahorcado</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="text-3xl font-bold uppercase text-[#379cc8] text-center py-8 border-b border-blue-300">El Juego del Ahorcado</h1>
     </header>
-    <main class="flex flex-col justify-around items-center h-[80vh]">
+    <main class="flex flex-wrap justify-center items-center h-[80vh] gap-7 py-3">
 
-        <section class="w-full flex justify-evenly items-center">
-            <article class="bg-slate-600 h-max min-w-80 w-6/12 flex flex-col items-center justify-evenly px-2 py-10 gap-y-10 rounded-lg">
+        <section class="w-7/12 flex justify-evenly items-center">
+            <article class="bg-slate-600 h-max min-w-80 w-full flex flex-col items-center justify-evenly px-2 py-10 gap-y-10 rounded-lg">
                 <div id="contenedorPalabra" class="w-full flex items-center flex-wrap gap-x-3 justify-center">
 
                 </div>
-                <div class="w-full">
-                    <p id="fallos" class="text-center text-lg text-slate-300 w-max mx-auto py-2 px-4 rounded-full bg-[#379cc8]">Fallos</p>
+
+                <div class="w-full flex items-center justify-center gap-x-10">
+                    <p id="fallos" class="text-center text-lg text-slate-300 w-max py-2 px-4 rounded-full bg-[#379cc8]">Fallos 0 / 7</p>
+                    <button id="btnReiniciar" type="button" class="text-[#5db8df] py-2 px-4 rounded-full hover:bg-slate-800 border-slate-300 border-2 hover:text-slate-300">Reiniciar</button>
                 </div>
             </article>
+        </section>
+
+        <section class="flex w-2/12 h-56 border-2">
+            <picture class="w-full flex">
+                
+            </picture>
         </section>
 
         <section class="bg-slate-800 h-max w-6/12 min-w-80 p-4">

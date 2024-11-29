@@ -6,14 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnReiniciar = document.getElementById('btnReiniciar');
     const letrasAhorcado = document.getElementsByClassName('letraCuadroAhorcado');
     const pildoraFallos = document.getElementById('fallos');
+    const imagenAhorcado = document.getElementById('ImgAhorcado');
     let fotosAhorcado = [
-        { nombre: 1, foto: '1.png' },
-        { nombre: 2, foto: '2.png' },
-        { nombre: 3, foto: '3.png' },
-        { nombre: 4, foto: '4.png' },
-        { nombre: 5, foto: '5.png' },
-        { nombre: 6, foto: '6.png' },
-        { nombre: 7, foto: '7.png' }
+        { nombre: 1, foto: '../media/ahorcado/1.png' },
+        { nombre: 2, foto: '../media/ahorcado/2.png' },
+        { nombre: 3, foto: '../media/ahorcado/3.png' },
+        { nombre: 4, foto: '../media/ahorcado/4.png' },
+        { nombre: 5, foto: '../media/ahorcado/5.png' },
+        { nombre: 6, foto: '../media/ahorcado/6.png' },
+        { nombre: 7, foto: '../media/ahorcado/7.png' }
     ];
 
     let palabraActual;
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         contadorFallos++;
                         pildoraFallos.textContent = `Fallos: ${contadorFallos} / ${fotosAhorcado.length}`
                         e.target.classList.toggle('bg-[#ff006e]');
+                        imagenAhorcado.setAttribute('src', fotosAhorcado[contadorFallos-1].foto)
                     }
     
                     if (EsGanador(palabraActual.length, aciertos)) {
@@ -131,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contenedorPalabra.classList.toggle('hidden');
         contendorLetras.classList.toggle('hidden');
         pildoraFallos.classList.toggle('hidden');
+        imagenAhorcado.setAttribute('src', '')
         alert(mensaje);
     }
 
@@ -162,6 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
         palabraActual = undefined;
         letraCorrecta = undefined;
 
+        imagenAhorcado.setAttribute('src', '');
+
+        pildoraFallos.textContent = `Fallos: ${contadorFallos} / ${fotosAhorcado.length}`
         GenerarEspacioPalabra(arregloPalabras);
         GenerarLetras(alfabetoEspaniol);
 
